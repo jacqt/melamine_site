@@ -1,0 +1,18 @@
+{
+  "name": "melamine_site",
+  "authors": [
+    "Anthony Guo <anthony.guo@some.ox.ac.uk>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

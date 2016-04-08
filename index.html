@@ -1,0 +1,276 @@
+<html>
+  <head>
+    <title> Yass </title>
+    <script script" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <link  href="./bower_components/semantic/dist/semantic.css" rel="stylesheet" type="text/css"></link>
+    <!-- TINY FADER -->
+    <script type="text/javascript">
+function T$(e){return document.getElementById(e)}function T$$(e,t){return t.getElementsByTagName(e)}var TINY=TINY||{};TINY.fader=function(){function t(t,n){e.n=t;for(s in n)e[s]=n[s];this.build()}var e={auto:0,resume:0};return t.prototype.build=function(){var t=T$(e.id),n=e.slides=T$$("li",t),r=n.length,i=e.count=e.zIndex=0;e.navid&&e.activeClass&&(e.nav=T$$("li",T$(e.navid)),e.activeClass=e.activeClass),t.style.overflow="hidden";for(i;i<r;i++)n[i].parentNode==t&&(n[i].style.position="absolute",n[i].opacity=e.visible?100:0,n[i].style.opacity=n[i].opacity/100,n[i].style.filter="alpha(opacity="+n[i].opacity+")",e.count++);this.pos(e.position||0,e.auto?1:0,e.visible,1)},t.prototype.play=function(){e.slides.ai=setInterval(new Function(e.n+".move(1, 1)"),e.auto*1e3)},t.prototype.move=function(t,n){var r=e.current+t,i=t==1?r==e.count?0:r:r<0?e.count-1:r;this.pos(i,n)},t.prototype.pos=function(t,n,r){if(e.current!=t){var i=e.slides[t];e.zIndex++,i.style.zIndex=e.zIndex,clearInterval(i.si),clearInterval(e.slides.ai),e.slides.ai=0,i.opacity>=100&&!r&&(i.opacity=0,i.style.opacity=0,i.style.filter="alpha(opacity=0)");if(e.nav)for(var s=0;s<e.count;s++)e.nav[s].className=s==t?e.activeClass:"";i.si=setInterval(new Function(e.n+".fade("+t+", "+n+")"),25),e.current=t}},t.prototype.fade=function(t,n){var r=e.slides[t];r.opacity>=100?(clearInterval(r.si),(n||e.auto&&e.resume)&&!e.slides.ai&&this.play()):(r.opacity+=3,r.style.opacity=r.opacity/100,r.style.filter="alpha(opacity="+r.opacity+")")},{init:t}}()
+    </script>
+
+    <style>
+/** STYLES ORDERED FROM TOP TO BOTTOM **/
+
+/** Edit this for the header logo **/
+.ui.center.header-logo { margin-top: 30px; }
+
+/** Edit these for the menu items **/
+.menu-item {
+  font-weight: bold;
+  padding: 10px;
+}
+.menu-item.active {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, red), color-stop(1, #FBBD08));
+  background-image: gradient( linear, left top, right top, color-stop(0, red), color-stop(1, #FBBD08));
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/** Edit this for the main image **/
+.ui.container.main-image { background-image: url("./assets/img_header.png"); height: 420; width: 960; }
+
+/** Edit these for the fading image slideshow **/
+#slides {position:relative; width:464px; height:352px; list-style:none; overflow:auto; padding:0; margin:0;}
+#slides li {width:464px; height:352px}
+
+/** Edit these for the sub-template page **/
+div.sub-template-item {
+}
+
+/** Edit these for the team page **/
+.ui.items .item .content {
+  text-align: left;
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Header logo -->
+    <div class="ui vertical center aligned basic segment header-logo">
+      <img src="./assets/logo_yass.png" />
+    </div>
+    <!-- Menu Items -->
+    <div class="ui container one column center grid">
+      <div class="ui twelve wide centered row">
+        <a href="#about-yass" class="menu-item about-yass"> About Yass </a>
+        <a href="#team" class="menu-item team"> Team </a>
+        <a href="#help" class="menu-item help"> Help! </a>
+        <a href="#jobs" class="menu-item jobs"> Jobs </a>
+      </div>
+    </div>
+
+    <!-- Page for 'About Yass', 'Jobs', 'Help' -->
+    <div class="ui pusher main-template-page">
+      <div class="ui vertical masthead center aligned basic segment">
+        <div class="ui container main-image">
+        </div>
+      </div>
+      <div class="ui grid">
+        <div class="ui centered row">
+          <div class="ui column" style="width: 480px; padding: 0">
+            <ul id="slides">
+              <li><img src="./assets/img_fade1.jpg" /> </li>
+              <li><img src="./assets/img_fade2.jpg" /> </li>
+              <li><img src="./assets/img_fade3.jpg" /> </li>
+            </ul>
+          </div>
+          <div class="ui column" style="width: 480px">
+            <!-- Custom content per page goes here -->
+            <div class="sub-template-item about-yass">
+              <h2>About Yass</h2>
+              <p> Yass is like a coffee shop where you can meet guys in the community. We're not just a dating ap. We're not a hookup app. We're just a place that's designed for gay guys to hangout, meet new people, and if you feel like it, coordinate to explore the city. But of course - do what feels right ;).
+              </p>
+
+              <b> Things to know </b>
+              <ol>
+                <li> Everyone's friendly and approachable. </li>
+                <li> Don't be shy - just say hi. </li>
+                <li> Welcome to San Francisco! </li>
+              </ol>
+            </div>
+
+            <div class="sub-template-item help">
+              <h2>Help!</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in justo purus. Cras quis massa sit amet dolor rhoncus dapibus in bibendum dui. Nam maximus quis arcu a pulvinar. Nullam lectus erat, sagittis eget magna quis, gravida tincidunt nisl. Suspendisse magna neque, vehicula pharetra risus vel, rutrum semper lectus. Proin convallis facilisis nisl at imperdiet. Ut quis dolor quis mauris tempor faucibus. Donec egestas, turpis placerat suscipit feugiat, dui leo finibus turpis, eu consectetur erat mauris et lectus. Sed eleifend ullamcorper semper. </p>
+              <p> Maecenas laoreet bibendum nibh sit amet laoreet. Etiam ex neque, finibus quis eleifend ac, tempor scelerisque augue. Phasellus rutrum facilisis neque, iaculis cursus libero pellentesque non. Aliquam feugiat, nisl nec scelerisque varius, turpis tellus vulputate tellus, vitae tempus ex nulla quis ex. Integer congue feugiat volutpat.</p>
+            </div>
+
+            <div class="sub-template-item jobs">
+              <h2>Jobs</h2>
+              <p> At Yass you'll be tackling challenges and solving problems you can intimately relate to. Our hope is to build the strongest team to help connect folks in the community and make them feel welcomded - no matter where they are.</p>
+              <p> It's a tough road. No doubt. But anything's possible with a badass team, some luck, and the ability to envision yourself succeed. We hope you'll join us!</p>
+
+              <p> Don't see a match below? Propose us something :).</p>
+
+              <p>
+              <a href="mailto:work@yass.com">work@yass.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team page -->
+    <div class="ui container grid">
+      <div class="ui centered row">
+        <div class="ui divided items" style="width: 50%">
+          <div class="item">
+            <div class="ui tiny image">
+              <img src="./assets/img_teamanthony.jpg">
+            </div>
+            <div class="content">
+              <div class="header">Anthony Guo</div>
+              <div class="meta">
+                <span class="title">Infrastructure Lead, Co-founder</span>
+              </div>
+              <div class="description">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui tiny image">
+              <img src="./assets/img_teambrian.jpg">
+            </div>
+            <div class="content">
+              <div class="header">Brian Tran</div>
+              <div class="meta">
+                <span class="title">CEO, Co-founder</span>
+              </div>
+              <div class="description">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui tiny image">
+              <img src="./assets/img_teamdavid.jpg">
+            </div>
+            <div class="content">
+              <div class="header">David Hsu</div>
+              <div class="meta">
+                <span class="title">Technical Lead, Co-founder</span>
+              </div>
+              <div class="description">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui tiny image">
+              <img src="./assets/img_teamlukas.jpg">
+            </div>
+            <div class="content">
+              <div class="header">Lukas Koebis</div>
+              <div class="meta">
+                <span class="title">Chat Lead, Co-founder</span>
+              </div>
+              <div class="description">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+// deal with the fading images.
+var slideshow=new TINY.fader.init('slideshow',{
+	id:'slides',
+	auto:3, // seconds between each fade.
+	resume:true,
+	vertical:false,
+	activeclass:'current',
+	position:0
+});
+
+// deal with routing
+$(window).on('hashchange', function(e) {
+    updateMenu();
+});
+
+var OKAY_LOCATIONS = ["about-yass", "team", "help", "jobs"];
+
+function validp(parsed_hash) {
+  if (parsed_hash === null) {
+    return false;
+  }
+  if (parsed_hash.length !== 2) {
+    return false;
+  }
+  var actual_location = parsed_hash[1];
+  for (var i = 0; i < OKAY_LOCATIONS.length; i++) {
+    if (actual_location == OKAY_LOCATIONS[i]) {
+      return true;
+    }
+  }
+  return false
+}
+
+function unhighlightMenu() {
+  $(".menu-item").removeClass("active");
+}
+
+function highlightMenuItem(actual_location) {
+  $(".menu-item." + actual_location).addClass("active");
+}
+
+function hideSubtemplates() {
+  $(".sub-template-item").hide();
+}
+
+function switchSubTemplate(actual_location) {
+  var visibleSubtemplates = $(".sub-template-item:visible");
+  if (visibleSubtemplates.length > 0) {
+    visibleSubtemplates.fadeOut(function() {
+      $(".sub-template-item." + actual_location).fadeIn();
+    });
+  } else {
+    $(".sub-template-item." + actual_location).fadeIn();
+  }
+}
+
+function hideMainTemplate() {
+  $(".main-template-page").hide();
+}
+
+function showMainTemplate() {
+  $(".main-template-page").show();
+}
+
+function showTeam() {
+}
+function hideTeam() {
+}
+
+function routePage(actual_location) {
+  if (actual_location == "team") {
+    hideMainTemplate();
+    showTeam();
+  } else {
+    hideTeam();
+    showMainTemplate();
+    switchSubTemplate(actual_location);
+  }
+}
+
+function updateMenu() {
+  var parsed_hash = /#(.*)/.exec(window.location.hash);
+  if (validp(parsed_hash)) {
+    var actual_location = parsed_hash[1];
+  } else {
+    var actual_location = OKAY_LOCATIONS[0];
+  }
+  unhighlightMenu();
+  highlightMenuItem(actual_location);
+  routePage(actual_location);
+  return false;
+}
+
+hideSubtemplates();
+updateMenu();
+    </script>
+  </body>
+</html>
