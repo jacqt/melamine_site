@@ -12,12 +12,14 @@ function T$(e){return document.getElementById(e)}function T$$(e,t){return t.getE
 /** STYLES ORDERED FROM TOP TO BOTTOM **/
 
 /** Edit this for the header logo **/
-.ui.center.header-logo { margin-top: 30px; }
+.ui.center.header-logo { margin: 18px 0 18px 0; }
 
 /** Edit these for the menu items **/
 .menu-item {
   font-weight: bold;
-  padding: 10px;
+  font-size: 16px;
+  padding: 0 16px 0 16px;
+  transition: color .4s;
 }
 .menu-item.active {
   background-image: -webkit-gradient( linear, left top, right top, color-stop(0, red), color-stop(1, #FBBD08));
@@ -26,6 +28,7 @@ function T$(e){return document.getElementById(e)}function T$$(e,t){return t.getE
   -webkit-background-clip: text;
   background-clip: text;
 }
+
 
 /** Edit this for the main image **/
 .ui.container.main-image { background-image: url("./assets/img_header.png"); height: 420; width: 960; }
@@ -62,12 +65,12 @@ div.sub-template-item {
 
     <!-- Page for 'About Yass', 'Jobs', 'Help' -->
     <div class="ui pusher main-template-page">
-      <div class="ui vertical masthead center aligned basic segment">
+      <div class="ui vertical masthead center aligned basic segment" style="margin: 19px 0 19px 0; padding: 0">
         <div class="ui container main-image">
         </div>
       </div>
       <div class="ui grid">
-        <div class="ui centered row">
+        <div class="ui centered row" style="margin: 19px 0 19px 0; padding: 0">
           <div class="ui column" style="width: 480px; padding: 0">
             <ul id="slides">
               <li><img src="./assets/img_fade1.jpg" /> </li>
@@ -75,19 +78,22 @@ div.sub-template-item {
               <li><img src="./assets/img_fade3.jpg" /> </li>
             </ul>
           </div>
-          <div class="ui column" style="width: 480px">
+          <div class="ui column" style="width: 480px; padding: 0 14px 0 8px">
             <!-- Custom content per page goes here -->
             <div class="sub-template-item about-yass">
               <h2>About Yass</h2>
               <p> Yass is like a coffee shop where you can meet guys in the community. We're not just a dating ap. We're not a hookup app. We're just a place that's designed for gay guys to hangout, meet new people, and if you feel like it, coordinate to explore the city. But of course - do what feels right ;).
               </p>
 
-              <b> Things to know </b>
-              <ol>
-                <li> Everyone's friendly and approachable. </li>
-                <li> Don't be shy - just say hi. </li>
-                <li> Welcome to San Francisco! </li>
-              </ol>
+              <p>
+                <b> Things to know </b>
+                <br>
+                <b>1.</b>  Everyone's friendly and approachable.
+                <br>
+                <b>2.</b>  Don't be shy - just say hi.
+                <br>
+                <b>3.</b>  Welcome to San Francisco!
+              </p>
             </div>
 
             <div class="sub-template-item help">
@@ -113,11 +119,11 @@ div.sub-template-item {
     </div>
 
     <!-- Team page -->
-    <div class="ui container grid team-page">
+    <div class="ui container grid team-page" style="margin: 16px 0 0 0; padding: 0">
       <div class="ui centered row">
         <div class="ui divided items" style="width: 50%">
           <div class="item">
-            <div class="ui tiny image">
+            <div class="ui image">
               <img src="./assets/img_teamanthony.jpg">
             </div>
             <div class="content">
@@ -131,7 +137,7 @@ div.sub-template-item {
             </div>
           </div>
           <div class="item">
-            <div class="ui tiny image">
+            <div class="ui image">
               <img src="./assets/img_teambrian.jpg">
             </div>
             <div class="content">
@@ -145,7 +151,7 @@ div.sub-template-item {
             </div>
           </div>
           <div class="item">
-            <div class="ui tiny image">
+            <div class="ui image">
               <img src="./assets/img_teamdavid.jpg">
             </div>
             <div class="content">
@@ -159,7 +165,7 @@ div.sub-template-item {
             </div>
           </div>
           <div class="item">
-            <div class="ui tiny image">
+            <div class="ui image">
               <img src="./assets/img_teamlukas.jpg">
             </div>
             <div class="content">
