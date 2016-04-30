@@ -12,12 +12,14 @@ function T$(e){return document.getElementById(e)}function T$$(e,t){return t.getE
 /** STYLES ORDERED FROM TOP TO BOTTOM **/
 
 /** Edit this for the header logo **/
-.ui.center.header-logo { margin-top: 30px; }
+.ui.center.header-logo { margin: 18px 0 18px 0; }
 
 /** Edit these for the menu items **/
 .menu-item {
   font-weight: bold;
-  padding: 10px;
+  font-size: 16px;
+  padding: 0 16px 0 16px;
+  transition: color .4s;
 }
 .menu-item.active {
   background-image: -webkit-gradient( linear, left top, right top, color-stop(0, red), color-stop(1, #FBBD08));
@@ -27,8 +29,9 @@ function T$(e){return document.getElementById(e)}function T$$(e,t){return t.getE
   background-clip: text;
 }
 
+
 /** Edit this for the main image **/
-.ui.container.main-image { background-image: url("./assets/img_header.png"); height: 420; width: 960; }
+.ui.container.main-image { background-image: url("./assets/img_headerapp.jpg"); height: 420; width: 960; }
 
 /** Edit these for the fading image slideshow **/
 #slides {position:relative; width:464px; height:352px; list-style:none; overflow:auto; padding:0; margin:0;}
@@ -62,12 +65,12 @@ div.sub-template-item {
 
     <!-- Page for 'About Yass', 'Jobs', 'Help' -->
     <div class="ui pusher main-template-page">
-      <div class="ui vertical masthead center aligned basic segment">
+      <div class="ui vertical masthead center aligned basic segment" style="margin: 19px 0 19px 0; padding: 0">
         <div class="ui container main-image">
         </div>
       </div>
       <div class="ui grid">
-        <div class="ui centered row">
+        <div class="ui centered row" style="margin: 19px 0 19px 0; padding: 0">
           <div class="ui column" style="width: 480px; padding: 0">
             <ul id="slides">
               <li><img src="./assets/img_fade1.jpg" /> </li>
@@ -75,36 +78,35 @@ div.sub-template-item {
               <li><img src="./assets/img_fade3.jpg" /> </li>
             </ul>
           </div>
-          <div class="ui column" style="width: 480px">
+          <div class="ui column" style="width: 480px; padding: 0 14px 0 8px">
             <!-- Custom content per page goes here -->
             <div class="sub-template-item about-yass">
               <h2>About Yass</h2>
               <p> Yass is like a coffee shop where you can meet guys in the community. We're not just a dating ap. We're not a hookup app. We're just a place that's designed for gay guys to hangout, meet new people, and if you feel like it, coordinate to explore the city. But of course - do what feels right ;).
               </p>
 
-              <b> Things to know </b>
-              <ol>
-                <li> Everyone's friendly and approachable. </li>
-                <li> Don't be shy - just say hi. </li>
-                <li> Welcome to San Francisco! </li>
-              </ol>
+              <p>
+                <b> Things to know </b>
+                <br>
+                <b>1.</b>  Everyone's friendly and approachable.
+                <br>
+                <b>2.</b>  Don't be shy - just say hi.
+                <br>
+                <b>3.</b>  Welcome to San Francisco!
+              </p>
             </div>
 
             <div class="sub-template-item help">
               <h2>Help!</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in justo purus. Cras quis massa sit amet dolor rhoncus dapibus in bibendum dui. Nam maximus quis arcu a pulvinar. Nullam lectus erat, sagittis eget magna quis, gravida tincidunt nisl. Suspendisse magna neque, vehicula pharetra risus vel, rutrum semper lectus. Proin convallis facilisis nisl at imperdiet. Ut quis dolor quis mauris tempor faucibus. Donec egestas, turpis placerat suscipit feugiat, dui leo finibus turpis, eu consectetur erat mauris et lectus. Sed eleifend ullamcorper semper. </p>
-              <p> Maecenas laoreet bibendum nibh sit amet laoreet. Etiam ex neque, finibus quis eleifend ac, tempor scelerisque augue. Phasellus rutrum facilisis neque, iaculis cursus libero pellentesque non. Aliquam feugiat, nisl nec scelerisque varius, turpis tellus vulputate tellus, vitae tempus ex nulla quis ex. Integer congue feugiat volutpat.</p>
+              <p>Got a question? Hopefully we'll have an answer! Please send your questions to <a href="mailto:helpme@yassplease.com">helpme@yassplease.com</a></p>
             </div>
 
             <div class="sub-template-item jobs">
               <h2>Jobs</h2>
-              <p> At Yass you'll be tackling challenges and solving problems you can intimately relate to. Our hope is to build the strongest team to help connect folks in the community and make them feel welcomded - no matter where they are.</p>
+              <p> At Yass you'll be tackling challenges and solving problems you can intimately relate to. Our hope is to build the strongest team to help connect folks in the community and make them feel welcome no matter where they are.</p>
               <p> It's a tough road. No doubt. But anything's possible with a badass team, some luck, and the ability to envision yourself succeed. We hope you'll join us!</p>
-
-              <p> Don't see a match below? Propose us something :).</p>
-
               <p>
-              <a href="mailto:work@yass.com">work@yass.com</a>
+              <a href="mailto:work@yass.com">work@yassplease.com</a>
               </p>
             </div>
           </div>
@@ -113,17 +115,17 @@ div.sub-template-item {
     </div>
 
     <!-- Team page -->
-    <div class="ui container grid team-page">
+    <div class="ui container grid team-page" style="margin: 16px 0 0 0; padding: 0">
       <div class="ui centered row">
         <div class="ui divided items" style="width: 50%">
           <div class="item">
-            <div class="ui tiny image">
+            <div class="ui image">
               <img src="./assets/img_teamanthony.jpg">
             </div>
             <div class="content">
               <div class="header">Anthony Guo</div>
               <div class="meta">
-                <span class="title">Infrastructure Lead, Co-founder</span>
+                <span class="title">Software Engineer</span>
               </div>
               <div class="description">
                 <p></p>
@@ -131,27 +133,30 @@ div.sub-template-item {
             </div>
           </div>
           <div class="item">
-            <div class="ui tiny image">
+            <div class="ui image">
               <img src="./assets/img_teambrian.jpg">
             </div>
             <div class="content">
               <div class="header">Brian Tran</div>
               <div class="meta">
-                <span class="title">CEO, Co-founder</span>
+                <span class="title">Product Manager & Designer</span>
               </div>
               <div class="description">
-                <p></p>
+                <p>Brian is a 1st generation Vietnamese-American and a University of Texas Longhorn. He's passionate about designing for community building, mobile marketplaces, and social ecommerce. Currently, Brian is a Designer in Residence at Kleiner Perkins Caufield and Byers. He's hosted by KPCB Edge, the seed stage team, designing products for entrepreneurs, building collaboration tools for investment teams, and helping investing partners reach their Design goals.
+                </p>
+                <p>Aside from work, Brian is equally passionate about LGBT entrepreneurship. He serves on the programming board for StartOut San Francisco and recently made a gay community app with some friends. If you're ever down for a tennis match or a fan of fashion photography, don't hesitate to reach out!</p>
+                </p>
               </div>
             </div>
           </div>
           <div class="item">
-            <div class="ui tiny image">
+            <div class="ui image">
               <img src="./assets/img_teamdavid.jpg">
             </div>
             <div class="content">
               <div class="header">David Hsu</div>
               <div class="meta">
-                <span class="title">Technical Lead, Co-founder</span>
+                <span class="title">Software Engineer</span>
               </div>
               <div class="description">
                 <p></p>
@@ -159,16 +164,19 @@ div.sub-template-item {
             </div>
           </div>
           <div class="item">
-            <div class="ui tiny image">
+            <div class="ui image">
               <img src="./assets/img_teamlukas.jpg">
             </div>
             <div class="content">
               <div class="header">Lukas Koebis</div>
               <div class="meta">
-                <span class="title">Chat Lead, Co-founder</span>
+                <span class="title">Software Engineer</span>
               </div>
               <div class="description">
-                <p></p>
+                <p>Born and raised all the way from Germany, it's only natural that Lukas is an enginneer. He's persuing a Master of Mathematics and Computer Science at The University of Oxford. In his spare time, Lukas taps into his entreprenurial side by jumping into hackathons and personal project. Nofista, his team's recent app for event organization, received 5000+ downloads. Lukas also spent time at Facebook on the Parse.com team, shipping a localisation feature for Push.
+                </p>
+                <p>Fun facts: Lukas represented Germany in the 2013 International Olympiad of Informatics and love to travel. He was recently in Chiang Mai and Singapore.</p>
+                </p>
               </div>
             </div>
           </div>
